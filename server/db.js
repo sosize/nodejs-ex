@@ -3,6 +3,7 @@ const settings = require('./settings');
 // 链接数据库 如果没有自动创建
 function _connectDB(callback) {
   let url = settings.dbUrl;
+  console.log(url)
   MongoClient.connect(url, function(err, db) {
     if (err) {
       callback(err, null);
