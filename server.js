@@ -1,5 +1,5 @@
 const { JSDOM } = require('jsdom')
-const dom = new JSDOM('<!DOCTYPE html><html><body></body></html>', { url: 'http://malawi.me' })
+const dom = new JSDOM('<!DOCTYPE html><html><body></body></html>', { url: 'https://yameet.herokuapp.com' })
 global.window = dom.window
 global.document = window.document
 global.navigator = window.navigator

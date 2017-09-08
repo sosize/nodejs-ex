@@ -2,13 +2,13 @@
  * Created by dell on 2017/5/14.
  */
 let md5 = require('./md5.js');
-let user = process.env.ADMIN_USER;
-let pass = md5(process.env.ADMIN_PASS);
+let user = 'admin';
+let pass = md5('admin');
 let avatar = 'avatar.jpg';
 let intro ='Never too old to learn';
 let nickname = 'Open blog by vue';
 
-mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
+mongoURL = process.env.MONGODB_URI || process.env.MONGO_URL,
 mongoURLLabel = "";
 
 if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
@@ -32,7 +32,7 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
 } else if (mongoURL == null) {
     mongoURL = 'mongodb://localhost:27017/vueblog'
 }
-
+console.log(mongoURL)
 module.exports = {
     dbUrl:mongoURL,
     user:user,

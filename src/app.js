@@ -21,7 +21,7 @@ const router = createRouter()
 sync(store, router)
 axios.defaults.timeout = 5000
 
-const baseURL = 'http://malawi.me/api'
+const baseURL = 'https://yameet.herokuapp.com/api'
 
 axios.defaults.baseURL = baseURL
 
